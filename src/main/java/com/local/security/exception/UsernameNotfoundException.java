@@ -1,7 +1,9 @@
 package com.local.security.exception;
 
-public class UsernameNotfoundException extends  RuntimeException {
-    public  UsernameNotfoundException(Exception e){
+import org.springframework.security.core.AuthenticationException;
+
+public class UsernameNotfoundException extends AuthenticationException {
+    public  UsernameNotfoundException(String  e){
         super(e);
     }
 }

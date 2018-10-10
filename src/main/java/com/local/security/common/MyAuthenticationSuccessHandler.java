@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.local.security.common.enums.RespCodeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +18,7 @@ import java.util.Map;
  * 自定义登录成功处理页面
  */
 @Component
-public class MyAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+public class    MyAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
     @Autowired
     private ObjectMapper objectMapper;

@@ -27,6 +27,6 @@ public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailu
 
         response.setContentType("application/json; charset=utf-8");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(objectMapper.writeValueAsString(ResponseData.getInstance().failed(RespCodeEnum.ERROR_PASSWORD)));
+        response.getWriter().write(objectMapper.writeValueAsString(ResponseData.getInstance().failed(RespCodeEnum.ERROR_PASSWORD.getCode(),exception.getMessage())));
     }
 }
